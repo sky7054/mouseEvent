@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseEvent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="rectangle"></div>
+        <button id="myButton">click me</button>
+    </section>
+    <script>
+        var rectDiv = document.querySelector(".rectangle")
+        let myButton = document.querySelector("myButton");
+
+        const handleMouseEvents = () =>{
+            console.log("click");
+            rectDiv.style.backgroundColor = "#f5ee62";
+        }
+
+        const handleMouseEvents2 = () => {
+            console.log("dblclick");
+            rectDiv.classList.add("addTransition");
+        }
+
+        const handleMouseEvents3 = () => {
+            rectDiv.classList.add("addTransition3");
+        }
+
+        const handleMouseEvents4 = () =>{
+            rectDiv.classList.add("addTransition4");
+        }
+
+        const handleMouseEvents5 = () => {
+            rectDiv.classList.add("addTransition5");
+        }
+
+        const handleMouseEvents6 = () =>{
+            rectDiv.classList.add("addTransition6");
+        }
+
+
+
+
+        rectDiv.addEventListener("mouseover",handleMouseEvents3);
+        rectDiv.addEventListener("mouseout",handleMouseEvents4);
+        rectDiv.addEventListener("mousedown",handleMouseEvents5);
+        rectDiv.addEventListener("mouseup",handleMouseEvents6)
+    </script>
+    
+</body>
+</html>
